@@ -18,7 +18,7 @@
         <h2>Yarn collection</h2>
         <div class="collection_item">
             <h3>An example of yarn</h3>
-            <img src="" alt="A picture of this yarn">
+            <img src="images/colorful-wool.jpg" alt="A picture of this yarn">
             <p>Description</p>
             <ul>
                 <li>Property 1: stuff</li>
@@ -30,7 +30,5 @@
         <p>©Copyright 2023</p>
     </footer>
 </body>    
-
-
 </html>
 
