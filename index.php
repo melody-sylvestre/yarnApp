@@ -1,6 +1,7 @@
 <?php
 
 require "src/dbFunctions.php";
+require "src/collectionHandlingFunctions.php";
 
 $db = connectToDb("yarnStashDb");
 $yarnItems = getItemsFromDb($db);
@@ -20,16 +21,19 @@ $yarnItems = getItemsFromDb($db);
     
     <main>
         <h2>Yarn collection</h2>
-        <div class="collection_item">
+        <!-- <div class="collection_item">
             <h3>An example of yarn</h3>
             <img src="images/colorful-wool.jpg" alt="A picture of this yarn">
             <p>Description</p>
             <ul>
                 <li>Property 1: stuff</li>
             </ul>        
-        </div>
+        </div> -->
         <?php
-            print_r($yarnItems); // this is just for testing
+            foreach($yarnItems as $yarn){
+                echo describeCollectionItem($yarn);
+            }
+            // print_r($yarnItems); // this is just for testing
         ?>    
     </main>    
 
