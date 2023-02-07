@@ -13,11 +13,19 @@ function describeCollectionItem(array $item): string {
 
     $description .= '<h4>Description</h4>';
     $description .= '<ul>';
+     
     $description .= '<li>Dominant colour: '. $item['dominantColour'] .'</li>';
     $description .= '<li>Yarn type: '. $item['yarnType'] .'</li>';
     $description .= '<li>Composition: '. $item['composition'] .'</li>';
-    $description .= '<li>Length of a skein: '. $item['lengthInMeters'] .' m</li>';
-    $description .= '<li>Quantity: '. $item['skeinNumber'] .' skeins in stash i.e ' . floor($item['skeinNumber'] * $item['lengthInMeters']) . ' m</li>'; 
+    
+    if(isset($item['lengthInMeters'])){
+        $description .= '<li>Length of a skein: '. $item['lengthInMeters'] .' m</li>';
+    }
+
+    if(isset($item['skeinNumber'])){
+        $description .= '<li>Quantity: '. $item['skeinNumber'] .' skeins in stash</li>';
+    }
+    
     if($item["project"]!== NULL) {
         $description.= '<li>Allocated to project: '. $item['project'] .'</li>';       
     } else {
