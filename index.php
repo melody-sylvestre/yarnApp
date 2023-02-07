@@ -4,9 +4,6 @@ require "src/dbFunctions.php";
 
 $db = connectToDb("yarnStashDb");
 $yarnItems = getItemsFromDb($db);
-
-print_r($yarnItems); // this is just for testing
-
 ?>
 
 <!DOCTYPE HTML>
@@ -31,6 +28,9 @@ print_r($yarnItems); // this is just for testing
                 <li>Property 1: stuff</li>
             </ul>        
         </div>
+        <?php
+            print_r($yarnItems); // this is just for testing
+        ?>    
     </main>    
 
     <footer>
