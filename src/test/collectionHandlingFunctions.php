@@ -19,7 +19,7 @@ class CollectionHandlingFunctions extends TestCase
                     ];
         $expectedOutput = '<div class="collection_item">';
         $expectedOutput .= '<h3>Unicorn brand Rainbow</h3>';
-        $expectedOutput .= '<img src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow>';              
+        $expectedOutput .= '<img src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow">';              
         $expectedOutput .= '<h4>Description</h4>';
         $expectedOutput .= '<ul>';
         $expectedOutput .= '<li>Dominant colour: purple</li>';
@@ -81,7 +81,7 @@ class CollectionHandlingFunctions extends TestCase
                     ];
         $expectedOutput = '<div class="collection_item">';
         $expectedOutput .= '<h3>Unicorn brand Rainbow</h3>';
-        $expectedOutput .= '<img src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow>';              
+        $expectedOutput .= '<img src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow">';              
         $expectedOutput .= '<h4>Description</h4>';
         $expectedOutput .= '<ul>';
         $expectedOutput .= '<li>Dominant colour: purple</li>';
@@ -90,6 +90,93 @@ class CollectionHandlingFunctions extends TestCase
         $expectedOutput .= '<li>Length of a skein: 100 m</li>';            
         $expectedOutput .= '<li>Quantity: 2 skeins in stash</li>';
         $expectedOutput .= '<li>Available for a new project!</li>';
+        $expectedOutput .= '</ul>';
+        $expectedOutput .= '</div>'; 
+        
+        $actualOutput = describeCollectionItem($yarnExample);
+
+        $this->assertEquals($expectedOutput, $actualOutput);
+    }
+
+    public function testSuccessDescribeCollectionItem_noColour(){
+        $yarnExample = ["name" => "Unicorn brand", 
+                        "shade" => "Rainbow", 
+                        "dominantColour" => NULL,
+                        "composition" => "Cashmere",
+                        "yarnType" => "Super Chunky", 
+                        "lengthInMeters" => 100,
+                        "skeinNumber" => 2, 
+                        "project"=> "Cool rainbow hat",
+                        "image" => "blue_scarf.jpg"      
+                    ];
+        $expectedOutput = '<div class="collection_item">';
+        $expectedOutput .= '<h3>Unicorn brand Rainbow</h3>';
+        $expectedOutput .= '<img src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow">';              
+        $expectedOutput .= '<h4>Description</h4>';
+        $expectedOutput .= '<ul>';
+        $expectedOutput .= '<li>Yarn type: Super Chunky</li>';
+        $expectedOutput .= '<li>Composition: Cashmere</li>';
+        $expectedOutput .= '<li>Length of a skein: 100 m</li>';            
+        $expectedOutput .= '<li>Quantity: 2 skeins in stash</li>';
+        $expectedOutput .= '<li>Allocated to project: Cool rainbow hat</li>';
+        $expectedOutput .= '</ul>';
+        $expectedOutput .= '</div>'; 
+        
+        $actualOutput = describeCollectionItem($yarnExample);
+
+        $this->assertEquals($expectedOutput, $actualOutput);
+    }
+
+    public function testSuccessDescribeCollectionItem_noYarnType()
+    {
+        $yarnExample = ["name" => "Unicorn brand", 
+                        "shade" => "Rainbow", 
+                        "dominantColour" => "purple",
+                        "composition" => "Cashmere", 
+                        "lengthInMeters" => 100,
+                        "skeinNumber" => 2, 
+                        "project"=> "Cool rainbow hat",
+                        "image" => "blue_scarf.jpg"      
+                    ];
+        $expectedOutput = '<div class="collection_item">';
+        $expectedOutput .= '<h3>Unicorn brand Rainbow</h3>';
+        $expectedOutput .= '<img src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow">';              
+        $expectedOutput .= '<h4>Description</h4>';
+        $expectedOutput .= '<ul>';
+        $expectedOutput .= '<li>Dominant colour: purple</li>';
+        $expectedOutput .= '<li>Composition: Cashmere</li>';
+        $expectedOutput .= '<li>Length of a skein: 100 m</li>';            
+        $expectedOutput .= '<li>Quantity: 2 skeins in stash</li>';
+        $expectedOutput .= '<li>Allocated to project: Cool rainbow hat</li>';
+        $expectedOutput .= '</ul>';
+        $expectedOutput .= '</div>'; 
+        
+        $actualOutput = describeCollectionItem($yarnExample);
+
+        $this->assertEquals($expectedOutput, $actualOutput);
+    }
+
+    public function testSuccessDescribeCollectionItem_NoComposition()
+    {
+        $yarnExample = ["name" => "Unicorn brand", 
+                        "shade" => "Rainbow", 
+                        "dominantColour" => "purple",
+                        "yarnType" => "Super Chunky", 
+                        "lengthInMeters" => 100,
+                        "skeinNumber" => 2, 
+                        "project"=> "Cool rainbow hat",
+                        "image" => "blue_scarf.jpg"      
+                    ];
+        $expectedOutput = '<div class="collection_item">';
+        $expectedOutput .= '<h3>Unicorn brand Rainbow</h3>';
+        $expectedOutput .= '<img src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow">';              
+        $expectedOutput .= '<h4>Description</h4>';
+        $expectedOutput .= '<ul>';
+        $expectedOutput .= '<li>Dominant colour: purple</li>';
+        $expectedOutput .= '<li>Yarn type: Super Chunky</li>';
+        $expectedOutput .= '<li>Length of a skein: 100 m</li>';            
+        $expectedOutput .= '<li>Quantity: 2 skeins in stash</li>';
+        $expectedOutput .= '<li>Allocated to project: Cool rainbow hat</li>';
         $expectedOutput .= '</ul>';
         $expectedOutput .= '</div>'; 
         
@@ -112,7 +199,7 @@ class CollectionHandlingFunctions extends TestCase
                     ];
         $expectedOutput = '<div class="collection_item">';
         $expectedOutput .= '<h3>Unicorn brand Rainbow</h3>';
-        $expectedOutput .= '<img src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow>';              
+        $expectedOutput .= '<img src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow">';              
         $expectedOutput .= '<h4>Description</h4>';
         $expectedOutput .= '<ul>';
         $expectedOutput .= '<li>Dominant colour: purple</li>';
@@ -142,7 +229,7 @@ class CollectionHandlingFunctions extends TestCase
                     ];
         $expectedOutput = '<div class="collection_item">';
         $expectedOutput .= '<h3>Unicorn brand Rainbow</h3>';
-        $expectedOutput .= '<img src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow>';              
+        $expectedOutput .= '<img src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow">';              
         $expectedOutput .= '<h4>Description</h4>';
         $expectedOutput .= '<ul>';
         $expectedOutput .= '<li>Dominant colour: purple</li>';
@@ -157,8 +244,7 @@ class CollectionHandlingFunctions extends TestCase
 
         $this->assertEquals($expectedOutput, $actualOutput);
     }
-
-
+    
 }
 
 ?>
