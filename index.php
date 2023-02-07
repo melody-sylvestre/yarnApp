@@ -5,7 +5,7 @@ require "src/dbFunctions.php";
 $db = connectToDb("yarnStashDb");
 $yarnItems = getItemsFromDb($db);
 
-print_r($yarnItems);
+print_r($yarnItems); // this is just for testing
 
 ?>
 
