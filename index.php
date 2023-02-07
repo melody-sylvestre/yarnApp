@@ -1,5 +1,12 @@
 <?php
 
+require "src/dbFunctions.php";
+
+$db = connectToDb("yarnStashDb");
+$yarnItems = getItemsFromDb($db);
+
+print_r($yarnItems);
+
 ?>
 
 <!DOCTYPE HTML>
