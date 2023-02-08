@@ -2,7 +2,7 @@
 require "../collectionHandlingFunctions.php";
 use PHPUnit\Framework\TestCase;
 
-class CollectionHandlingFunctions extends TestCase 
+class collectionHandlingFunctions extends TestCase 
 {
 
     public function testFailureDescribeCollectionItem_EmptyItem() 
@@ -73,10 +73,13 @@ class CollectionHandlingFunctions extends TestCase
                         "image" => "blue_scarf.jpg"      
                     ];
         $expectedOutput = '<div class="collection_item">';
-        $expectedOutput .= '<h3>Unicorn brand</h3>';
+
+        //In the output these 2 lines will change to the case where everything is defined"
+        $expectedOutput .= '<h3>Unicorn brand</h3>';   
         $expectedOutput .= '<img src="images/blue_scarf.jpg" alt="A picture of Unicorn brand">';              
+        
         $expectedOutput .= '<h4>Description</h4>';
-        $expectedOutput .= '<ul>';
+        $expectedOutput .= '<ul>'; 
         $expectedOutput .= '<li>Dominant colour: purple</li>';
         $expectedOutput .= '<li>Yarn type: Super Chunky</li>';
         $expectedOutput .= '<li>Composition: Cashmere</li>';
@@ -87,7 +90,6 @@ class CollectionHandlingFunctions extends TestCase
         $expectedOutput .= '</div>'; 
         
         $actualOutput = describeCollectionItem($yarnExample);
-
         $this->assertEquals($expectedOutput, $actualOutput);
     }
 
@@ -105,7 +107,11 @@ class CollectionHandlingFunctions extends TestCase
                     ];
         $expectedOutput = '<div class="collection_item">';
         $expectedOutput .= '<h3>Unicorn brand Rainbow</h3>';
+        
+        //When image is undefined a stock image is used 
         $expectedOutput .= '<img src="images/colorful-wool.jpg" alt="Stock image of colorful yarn">';              
+
+        //this is unchanged
         $expectedOutput .= '<h4>Description</h4>';
         $expectedOutput .= '<ul>';
         $expectedOutput .= '<li>Dominant colour: purple</li>';
@@ -134,6 +140,7 @@ class CollectionHandlingFunctions extends TestCase
                         "project"=> NULL,
                         "image" => "blue_scarf.jpg"      
                     ];
+        // this doesn't change            
         $expectedOutput = '<div class="collection_item">';
         $expectedOutput .= '<h3>Unicorn brand Rainbow</h3>';
         $expectedOutput .= '<img src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow">';              
@@ -144,6 +151,8 @@ class CollectionHandlingFunctions extends TestCase
         $expectedOutput .= '<li>Composition: Cashmere</li>';
         $expectedOutput .= '<li>Length of a skein: 100 m</li>';            
         $expectedOutput .= '<li>Quantity: 2 skeins in stash</li>';
+
+        // the following line is printed when project is undefined
         $expectedOutput .= '<li>Available for a new project!</li>';
         $expectedOutput .= '</ul>';
         $expectedOutput .= '</div>'; 
@@ -153,6 +162,7 @@ class CollectionHandlingFunctions extends TestCase
         $this->assertEquals($expectedOutput, $actualOutput);
     }
 
+// in the following functions, we check that the bullet point of the missing property is not printed
     public function testSuccessDescribeCollectionItem_undefinedColour(){
         $yarnExample = ["name" => "Unicorn brand", 
                         "shade" => "Rainbow", 
