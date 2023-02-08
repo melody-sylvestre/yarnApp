@@ -12,24 +12,24 @@ function describeCollectionItem(array $item): string {
         $description = '<div class="collection_item">';
         
         if(isset($item["name"]) && isset($item["shade"])){
-            $description .= '<h3>' . $item["name"]. " " . $item["shade"] . '</h3>';
+            $description .= '<h3 tabindex="0">' . $item["name"]. " " . $item["shade"] . '</h3>';
         
         } else if(!isset($item['shade'])){
-            $description .= '<h3>' . $item["name"]. '</h3>';
+            $description .= '<h3 tabindex="0">' . $item["name"]. '</h3>';
         }
 
         if(isset($item["image"])) { 
             if (isset($item["shade"])) {
-                $description.= '<img src="images/' . $item["image"] . '" alt="A picture of ' .
+                $description.= '<img tabindex="0" src="images/' . $item["image"] . '" alt="A picture of ' .
                             $item["name"]. ' in shade ' . $item["shade"] . '">';      
             } else {   
-                $description.= '<img src="images/' . $item["image"] . '" alt="A picture of ' . $item["name"].'">';
+                $description.= '<img tabindex="0" src="images/' . $item["image"] . '" alt="A picture of ' . $item["name"].'">';
             }    
         } else {
-            $description .= '<img src="images/colorful-wool.jpg" alt="Stock image of colorful yarn">' ;
+            $description .= '<img tabindex="0" src="images/colorful-wool.jpg" alt="Stock image of colorful yarn">' ;
         }
 
-        $description .= '<h4>Description</h4>';
+        $description .= '<h4 tabindex="0">Description</h4>';
         $description .= '<ul>';
 
         if(isset($item['dominantColour'])){
