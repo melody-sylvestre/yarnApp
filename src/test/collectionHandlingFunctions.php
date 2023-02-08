@@ -40,9 +40,9 @@ class collectionHandlingFunctions extends TestCase
                         "image" => "blue_scarf.jpg"      
                     ];
         $expectedOutput = '<div class="collection_item">';
-        $expectedOutput .= '<h3>Unicorn brand Rainbow</h3>';
-        $expectedOutput .= '<img src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow">';              
-        $expectedOutput .= '<h4>Description</h4>';
+        $expectedOutput .= '<h3 tabindex="0">Unicorn brand Rainbow</h3>';
+        $expectedOutput .= '<img tabindex="0" src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow">';              
+        $expectedOutput .= '<h4 tabindex="0">Description</h4>';
         $expectedOutput .= '<ul>';
         $expectedOutput .= '<li>Dominant colour: purple</li>';
         $expectedOutput .= '<li>Yarn type: Super Chunky</li>';
@@ -75,10 +75,10 @@ class collectionHandlingFunctions extends TestCase
         $expectedOutput = '<div class="collection_item">';
 
         //In the output these 2 lines will change to the case where everything is defined"
-        $expectedOutput .= '<h3>Unicorn brand</h3>';   
-        $expectedOutput .= '<img src="images/blue_scarf.jpg" alt="A picture of Unicorn brand">';              
+        $expectedOutput .= '<h3 tabindex="0">Unicorn brand</h3>';   
+        $expectedOutput .= '<img tabindex="0" src="images/blue_scarf.jpg" alt="A picture of Unicorn brand">';              
         
-        $expectedOutput .= '<h4>Description</h4>';
+        $expectedOutput .= '<h4 tabindex="0">Description</h4>';
         $expectedOutput .= '<ul>'; 
         $expectedOutput .= '<li>Dominant colour: purple</li>';
         $expectedOutput .= '<li>Yarn type: Super Chunky</li>';
@@ -106,13 +106,13 @@ class collectionHandlingFunctions extends TestCase
                         "image" => NULL      
                     ];
         $expectedOutput = '<div class="collection_item">';
-        $expectedOutput .= '<h3>Unicorn brand Rainbow</h3>';
+        $expectedOutput .= '<h3 tabindex="0">Unicorn brand Rainbow</h3>';
         
         //When image is undefined a stock image is used 
-        $expectedOutput .= '<img src="images/colorful-wool.jpg" alt="Stock image of colorful yarn">';              
+        $expectedOutput .= '<img tabindex="0" src="images/colorful-wool.jpg" alt="Stock image of colorful yarn">';              
 
         //this is unchanged
-        $expectedOutput .= '<h4>Description</h4>';
+        $expectedOutput .= '<h4 tabindex="0">Description</h4>';
         $expectedOutput .= '<ul>';
         $expectedOutput .= '<li>Dominant colour: purple</li>';
         $expectedOutput .= '<li>Yarn type: Super Chunky</li>';
@@ -142,9 +142,9 @@ class collectionHandlingFunctions extends TestCase
                     ];
         // this doesn't change            
         $expectedOutput = '<div class="collection_item">';
-        $expectedOutput .= '<h3>Unicorn brand Rainbow</h3>';
-        $expectedOutput .= '<img src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow">';              
-        $expectedOutput .= '<h4>Description</h4>';
+        $expectedOutput .= '<h3 tabindex="0">Unicorn brand Rainbow</h3>';
+        $expectedOutput .= '<img tabindex="0" src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow">';              
+        $expectedOutput .= '<h4 tabindex="0">Description</h4>';
         $expectedOutput .= '<ul>';
         $expectedOutput .= '<li>Dominant colour: purple</li>';
         $expectedOutput .= '<li>Yarn type: Super Chunky</li>';
@@ -175,9 +175,9 @@ class collectionHandlingFunctions extends TestCase
                         "image" => "blue_scarf.jpg"      
                     ];
         $expectedOutput = '<div class="collection_item">';
-        $expectedOutput .= '<h3>Unicorn brand Rainbow</h3>';
-        $expectedOutput .= '<img src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow">';              
-        $expectedOutput .= '<h4>Description</h4>';
+        $expectedOutput .= '<h3 tabindex="0">Unicorn brand Rainbow</h3>';
+        $expectedOutput .= '<img tabindex="0" src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow">';              
+        $expectedOutput .= '<h4 tabindex="0">Description</h4>';
         $expectedOutput .= '<ul>';
         $expectedOutput .= '<li>Yarn type: Super Chunky</li>';
         $expectedOutput .= '<li>Composition: Cashmere</li>';
@@ -204,9 +204,9 @@ class collectionHandlingFunctions extends TestCase
                         "image" => "blue_scarf.jpg"      
                     ];
         $expectedOutput = '<div class="collection_item">';
-        $expectedOutput .= '<h3>Unicorn brand Rainbow</h3>';
-        $expectedOutput .= '<img src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow">';              
-        $expectedOutput .= '<h4>Description</h4>';
+        $expectedOutput .= '<h3 tabindex="0">Unicorn brand Rainbow</h3>';
+        $expectedOutput .= '<img tabindex="0" src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow">';              
+        $expectedOutput .= '<h4 tabindex="0">Description</h4>';
         $expectedOutput .= '<ul>';
         $expectedOutput .= '<li>Dominant colour: purple</li>';
         $expectedOutput .= '<li>Composition: Cashmere</li>';
@@ -233,9 +233,9 @@ class collectionHandlingFunctions extends TestCase
                         "image" => "blue_scarf.jpg"      
                     ];
         $expectedOutput = '<div class="collection_item">';
-        $expectedOutput .= '<h3>Unicorn brand Rainbow</h3>';
-        $expectedOutput .= '<img src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow">';              
-        $expectedOutput .= '<h4>Description</h4>';
+        $expectedOutput .= '<h3 tabindex="0">Unicorn brand Rainbow</h3>';
+        $expectedOutput .= '<img tabindex="0" src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow">';              
+        $expectedOutput .= '<h4 tabindex="0">Description</h4>';
         $expectedOutput .= '<ul>';
         $expectedOutput .= '<li>Dominant colour: purple</li>';
         $expectedOutput .= '<li>Yarn type: Super Chunky</li>';
@@ -263,9 +263,9 @@ class collectionHandlingFunctions extends TestCase
                         "image" => "blue_scarf.jpg"      
                     ];
         $expectedOutput = '<div class="collection_item">';
-        $expectedOutput .= '<h3>Unicorn brand Rainbow</h3>';
-        $expectedOutput .= '<img src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow">';              
-        $expectedOutput .= '<h4>Description</h4>';
+        $expectedOutput .= '<h3 tabindex="0">Unicorn brand Rainbow</h3>';
+        $expectedOutput .= '<img tabindex="0" src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow">';              
+        $expectedOutput .= '<h4 tabindex="0">Description</h4>';
         $expectedOutput .= '<ul>';
         $expectedOutput .= '<li>Dominant colour: purple</li>';
         $expectedOutput .= '<li>Yarn type: Super Chunky</li>';
@@ -293,9 +293,9 @@ class collectionHandlingFunctions extends TestCase
                         "image" => "blue_scarf.jpg"      
                     ];
         $expectedOutput = '<div class="collection_item">';
-        $expectedOutput .= '<h3>Unicorn brand Rainbow</h3>';
-        $expectedOutput .= '<img src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow">';              
-        $expectedOutput .= '<h4>Description</h4>';
+        $expectedOutput .= '<h3 tabindex="0">Unicorn brand Rainbow</h3>';
+        $expectedOutput .= '<img tabindex="0" src="images/blue_scarf.jpg" alt="A picture of Unicorn brand in shade Rainbow">';              
+        $expectedOutput .= '<h4 tabindex="0">Description</h4>';
         $expectedOutput .= '<ul>';
         $expectedOutput .= '<li>Dominant colour: purple</li>';
         $expectedOutput .= '<li>Yarn type: Super Chunky</li>';

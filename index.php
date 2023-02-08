@@ -8,20 +8,20 @@ $yarnItems = getItemsFromDb($db);
 ?>
 
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
-    <title>My yarn stash</title>
+    <title>Melody's yarn stash</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" rel="stylesheet">
     <link href="styles/style.css" type="text/css" rel="stylesheet">           
 </head>
 
 <body>
     <header>
-        <h1>My Yarn Stash</h1>  
+        <h1 tabindex="0">My Yarn Stash</h1>  
     </header>
     
     <main>
-        <h2>Yarn collection</h2>
+        <h2 tabindex="0">Yarn collection</h2>
         <?php
             foreach($yarnItems as $yarn){
                 try {
