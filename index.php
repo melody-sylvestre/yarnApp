@@ -24,7 +24,11 @@ $yarnItems = getItemsFromDb($db);
         <h2>Yarn collection</h2>
         <?php
             foreach($yarnItems as $yarn){
-                echo describeCollectionItem($yarn);
+                try {
+                    echo describeCollectionItem($yarn);
+                } catch (Exception $exception) {
+                   error_log($exception->getMessage(), 3, "error.log");     
+                }    
             }
         ?>    
     </main>    

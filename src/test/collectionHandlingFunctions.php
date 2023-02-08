@@ -58,6 +58,8 @@ class CollectionHandlingFunctions extends TestCase
         $this->assertEquals($expectedOutput, $actualOutput);
     }
 
+ //The following functions check that the output is correct when one of the fields is missing 
+ // that item in the database    
     public function testSuccessDescribeCollectionItem_undefinedShade()
     {
         $yarnExample = ["name" => "Unicorn brand", 
@@ -88,7 +90,6 @@ class CollectionHandlingFunctions extends TestCase
 
         $this->assertEquals($expectedOutput, $actualOutput);
     }
-
 
     public function testSuccessDescribeCollectionItem_undefinedImage()
     {
@@ -298,7 +299,6 @@ class CollectionHandlingFunctions extends TestCase
 
         $this->assertEquals($expectedOutput, $actualOutput);
     }
-
 }
 
 ?>
