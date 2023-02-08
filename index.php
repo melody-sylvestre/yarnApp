@@ -8,7 +8,7 @@ $yarnItems = getItemsFromDb($db);
 ?>
 
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
     <title>My yarn stash</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" rel="stylesheet">
