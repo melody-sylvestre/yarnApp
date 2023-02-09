@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db:3306
--- Generation Time: Feb 07, 2023 at 05:00 PM
+-- Generation Time: Feb 09, 2023 at 10:18 AM
 -- Server version: 5.7.41
 -- PHP Version: 8.0.19
 
@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `yarn`
+-- Table structure for table `yarns`
 --
 
-CREATE TABLE `yarn` (
+CREATE TABLE `yarns` (
   `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE latin1_bin NOT NULL,
   `shade` varchar(255) COLLATE latin1_bin DEFAULT NULL,
@@ -41,10 +41,10 @@ CREATE TABLE `yarn` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_bin;
 
 --
--- Dumping data for table `yarn`
+-- Dumping data for table `yarns`
 --
 
-INSERT INTO `yarn` (`id`, `name`, `shade`, `dominantColour`, `composition`, `yarnType`, `lengthInMeters`, `skeinNumber`, `project`, `image`) VALUES
+INSERT INTO `yarns` (`id`, `name`, `shade`, `dominantColour`, `composition`, `yarnType`, `lengthInMeters`, `skeinNumber`, `project`, `image`) VALUES
 (1, 'Sirdar Jewelspun', 'Midnight Fjords', 'pink', 'Acrylic', 'Aran', 500, 0.66, NULL, 'pink_shawl.jpg'),
 (2, 'Sirdar Jewelspun', 'Golden Green', 'green', 'Acrylic', 'Aran', 500, 0.1, NULL, 'green_shawl.jpg'),
 (3, 'Deramores Studio', 'Fuschia ', 'pink', 'Acrylic', 'Chunky', 80, 6, 'Diagonal weave blanket ', NULL),
@@ -60,9 +60,9 @@ INSERT INTO `yarn` (`id`, `name`, `shade`, `dominantColour`, `composition`, `yar
 --
 
 --
--- Indexes for table `yarn`
+-- Indexes for table `yarns`
 --
-ALTER TABLE `yarn`
+ALTER TABLE `yarns`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -70,9 +70,9 @@ ALTER TABLE `yarn`
 --
 
 --
--- AUTO_INCREMENT for table `yarn`
+-- AUTO_INCREMENT for table `yarns`
 --
-ALTER TABLE `yarn`
+ALTER TABLE `yarns`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
