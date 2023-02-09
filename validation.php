@@ -2,6 +2,8 @@
 
 session_start();
 
+require "src/dbFunctions.php";
+
 $itemIsInvalid = $_POST===[] || !isset($_POST["name"]) ; 
 
 if ($itemIsInvalid) {
@@ -49,7 +51,10 @@ if ($itemIsInvalid) {
      }
  
      $_SESSION["validItem"] = true; 
-     header('Location: addItem.php');
+     $yarnDb = connectToDb("yarnStashDb");
+     addItemToDb($yarnDb, $newYarn);
+
+//     header('Location: addItem.php');
      //add something with db?
 
 

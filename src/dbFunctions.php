@@ -16,3 +16,11 @@ function getItemsFromDb(PDO $db): array {
     return $yarnItems;
 }
 
+function addItemToDb(PDO $db, array $newYarnItem) {
+    $query = $db->prepare("INSERT INTO yarns(name, shade, dominantColour, composition, yarnType, 
+             lengthInMeters, skeinNumber, project, image) VALUES(:name, :shade, :dominantColour, :composition, :yarnType, 
+             :lengthInMeters, :skeinNumber, :project, :image)");
+    $query->execute($newYarnItem);    
+}
+
+
