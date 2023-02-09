@@ -22,6 +22,9 @@ $yarnItems = getItemsFromDb($db);
     
     <main>
         <h2 tabindex="0">Yarn collection</h2>
+        <div class="interactions_with_db">
+            <a href="addItem.php">Add a new Item</a>
+        </div>   
         <?php
             foreach($yarnItems as $yarn){
                 try {
@@ -31,8 +34,8 @@ $yarnItems = getItemsFromDb($db);
                 }    
             }
         ?>    
-    </main>    
-
+    </main>
+     
     <footer>
         <p>© Copyright 2023</p>
     </footer>
