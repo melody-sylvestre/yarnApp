@@ -8,11 +8,11 @@ function connectToDb(string $dbname): PDO {
 }
 
 function getItemsFromDb(PDO $db): array {
-    $query = $db->prepare("SELECT * FROM yarn");
+    $query = $db->prepare("SELECT name, shade, dominantColour, composition, yarnType, 
+             lengthInMeters, skeinNumber, project, image  FROM yarns");
     $query->execute();
     $yarnItems = $query->fetchAll();
 
     return $yarnItems;
 }
 
-?>

@@ -5,7 +5,7 @@ use PHPUnit\Framework\TestCase;
 class collectionHandlingFunctions extends TestCase 
 {
 
-    public function testFailureDescribeCollectionItem_EmptyItem() 
+    public function testFailureDescribeCollectionItem_emptyItem() 
     {
         $yarnExample = [];
         $this->expectException(Exception::class); 
@@ -13,7 +13,8 @@ class collectionHandlingFunctions extends TestCase
     }
     
     public function testFailureDescribeCollectionItem_undefinedName() {
-        $yarnExample = ["name" => NULL, 
+        $yarnExample = [
+                        "name" => NULL, 
                         "shade" => "Rainbow", 
                         "dominantColour" => "purple",
                         "composition" => "Cashmere",
@@ -29,7 +30,8 @@ class collectionHandlingFunctions extends TestCase
 
     public function testSuccessDescribeCollectionItem_EverythingDefined()
     {
-        $yarnExample = ["name" => "Unicorn brand", 
+        $yarnExample = [
+                        "name" => "Unicorn brand", 
                         "shade" => "Rainbow", 
                         "dominantColour" => "purple",
                         "composition" => "Cashmere",
@@ -58,11 +60,12 @@ class collectionHandlingFunctions extends TestCase
         $this->assertEquals($expectedOutput, $actualOutput);
     }
 
- //The following functions check that the output is correct when one of the fields is missing 
- // that item in the database    
+    // The following functions check that the output is correct when one of the fields (other than name) 
+    // is missing for this item of the database    
     public function testSuccessDescribeCollectionItem_undefinedShade()
     {
-        $yarnExample = ["name" => "Unicorn brand", 
+        $yarnExample = [
+                        "name" => "Unicorn brand", 
                         "shade" => NULL, 
                         "dominantColour" => "purple",
                         "composition" => "Cashmere",
@@ -95,7 +98,8 @@ class collectionHandlingFunctions extends TestCase
 
     public function testSuccessDescribeCollectionItem_undefinedImage()
     {
-        $yarnExample = ["name" => "Unicorn brand", 
+        $yarnExample = [
+                        "name" => "Unicorn brand", 
                         "shade" => "Rainbow", 
                         "dominantColour" => "purple",
                         "composition" => "Cashmere",
@@ -130,7 +134,8 @@ class collectionHandlingFunctions extends TestCase
 
     public function testSuccessDescribeCollectionItem_undefinedProject()
     {
-        $yarnExample = ["name" => "Unicorn brand", 
+        $yarnExample = [
+                        "name" => "Unicorn brand", 
                         "shade" => "Rainbow", 
                         "dominantColour" => "purple",
                         "composition" => "Cashmere",
@@ -162,9 +167,9 @@ class collectionHandlingFunctions extends TestCase
         $this->assertEquals($expectedOutput, $actualOutput);
     }
 
-// in the following functions, we check that the bullet point of the missing property is not printed
     public function testSuccessDescribeCollectionItem_undefinedColour(){
-        $yarnExample = ["name" => "Unicorn brand", 
+        $yarnExample = [
+                        "name" => "Unicorn brand", 
                         "shade" => "Rainbow", 
                         "dominantColour" => NULL,
                         "composition" => "Cashmere",
@@ -194,7 +199,8 @@ class collectionHandlingFunctions extends TestCase
 
     public function testSuccessDescribeCollectionItem_undefinedYarnType()
     {
-        $yarnExample = ["name" => "Unicorn brand", 
+        $yarnExample = [
+                        "name" => "Unicorn brand", 
                         "shade" => "Rainbow", 
                         "dominantColour" => "purple",
                         "composition" => "Cashmere", 
@@ -223,7 +229,8 @@ class collectionHandlingFunctions extends TestCase
 
     public function testSuccessDescribeCollectionItem_undefinedComposition()
     {
-        $yarnExample = ["name" => "Unicorn brand", 
+        $yarnExample = [
+                        "name" => "Unicorn brand", 
                         "shade" => "Rainbow", 
                         "dominantColour" => "purple",
                         "yarnType" => "Super Chunky", 
@@ -252,7 +259,8 @@ class collectionHandlingFunctions extends TestCase
 
     public function testSuccessDescribeCollectionItem_undefinedLength()
     {
-        $yarnExample = ["name" => "Unicorn brand", 
+        $yarnExample = [
+                        "name" => "Unicorn brand", 
                         "shade" => "Rainbow", 
                         "dominantColour" => "purple",
                         "composition" => "Cashmere",
@@ -282,7 +290,8 @@ class collectionHandlingFunctions extends TestCase
 
     public function testSuccessDescribeCollectionItem_undefinedSkeinNumber()
     {
-        $yarnExample = ["name" => "Unicorn brand", 
+        $yarnExample = [
+                        "name" => "Unicorn brand", 
                         "shade" => "Rainbow", 
                         "dominantColour" => "purple",
                         "composition" => "Cashmere",
