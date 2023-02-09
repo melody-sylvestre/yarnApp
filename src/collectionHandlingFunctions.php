@@ -19,10 +19,10 @@ function describeCollectionItem(array $item): string {
 
         if (isset($item["image"])) { 
             if (isset($item["shade"])) {
-                $description.= '<img tabindex="0" src="images/' . $item["image"] . '" alt="A picture of ' .
+                $description.= '<img tabindex="0" src="' . $item["image"] . '" alt="A picture of ' .
                             $item["name"]. ' in shade ' . $item["shade"] . '">';      
             } else {   
-                $description.= '<img tabindex="0" src="images/' . $item["image"] . '" alt="A picture of ' . $item["name"].'">';
+                $description.= '<img tabindex="0" src="' . $item["image"] . '" alt="A picture of ' . $item["name"].'">';
             }    
         } else {
             $description .= '<img tabindex="0" src="images/colorful-wool.jpg" alt="Stock image of colorful yarn">' ;

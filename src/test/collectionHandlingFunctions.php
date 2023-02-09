@@ -22,7 +22,7 @@ class collectionHandlingFunctions extends TestCase
                         "lengthInMeters" => 100,
                         "skeinNumber" => 2, 
                         "project"=> "Cool rainbow hat",
-                        "image" => "blue_scarf.jpg"      
+                        "image" => "images/blue_scarf.jpg"      
                     ];
         $this->expectException(Exception::class);
         describeCollectionItem($yarnExample);
@@ -39,7 +39,7 @@ class collectionHandlingFunctions extends TestCase
                         "lengthInMeters" => 100,
                         "skeinNumber" => 2, 
                         "project"=> "Cool rainbow hat",
-                        "image" => "blue_scarf.jpg"      
+                        "image" => "images/blue_scarf.jpg"      
                     ];
         $expectedOutput = '<div class="collection_item">';
         $expectedOutput .= '<h3 tabindex="0">Unicorn brand Rainbow</h3>';
@@ -73,7 +73,7 @@ class collectionHandlingFunctions extends TestCase
                         "lengthInMeters" => 100,
                         "skeinNumber" => 2, 
                         "project"=> "Cool rainbow hat",
-                        "image" => "blue_scarf.jpg"      
+                        "image" => "images/blue_scarf.jpg"      
                     ];
         $expectedOutput = '<div class="collection_item">';
 
@@ -143,7 +143,7 @@ class collectionHandlingFunctions extends TestCase
                         "lengthInMeters" => 100,
                         "skeinNumber" => 2, 
                         "project"=> NULL,
-                        "image" => "blue_scarf.jpg"      
+                        "image" => "images/blue_scarf.jpg"      
                     ];
         // this doesn't change            
         $expectedOutput = '<div class="collection_item">';
@@ -177,7 +177,7 @@ class collectionHandlingFunctions extends TestCase
                         "lengthInMeters" => 100,
                         "skeinNumber" => 2, 
                         "project"=> "Cool rainbow hat",
-                        "image" => "blue_scarf.jpg"      
+                        "image" => "images/blue_scarf.jpg"      
                     ];
         $expectedOutput = '<div class="collection_item">';
         $expectedOutput .= '<h3 tabindex="0">Unicorn brand Rainbow</h3>';
@@ -207,7 +207,7 @@ class collectionHandlingFunctions extends TestCase
                         "lengthInMeters" => 100,
                         "skeinNumber" => 2, 
                         "project"=> "Cool rainbow hat",
-                        "image" => "blue_scarf.jpg"      
+                        "image" => "images/blue_scarf.jpg"      
                     ];
         $expectedOutput = '<div class="collection_item">';
         $expectedOutput .= '<h3 tabindex="0">Unicorn brand Rainbow</h3>';
@@ -237,7 +237,7 @@ class collectionHandlingFunctions extends TestCase
                         "lengthInMeters" => 100,
                         "skeinNumber" => 2, 
                         "project"=> "Cool rainbow hat",
-                        "image" => "blue_scarf.jpg"      
+                        "image" => "images/blue_scarf.jpg"      
                     ];
         $expectedOutput = '<div class="collection_item">';
         $expectedOutput .= '<h3 tabindex="0">Unicorn brand Rainbow</h3>';
@@ -268,7 +268,7 @@ class collectionHandlingFunctions extends TestCase
                         "lengthInMeters" => NULL,
                         "skeinNumber" => 2, 
                         "project"=> NULL,
-                        "image" => "blue_scarf.jpg"      
+                        "image" => "images/blue_scarf.jpg"      
                     ];
         $expectedOutput = '<div class="collection_item">';
         $expectedOutput .= '<h3 tabindex="0">Unicorn brand Rainbow</h3>';
@@ -299,7 +299,7 @@ class collectionHandlingFunctions extends TestCase
                         "lengthInMeters" => 100,
                         "skeinNumber" => NULL, 
                         "project"=> "Cool rainbow hat",
-                        "image" => "blue_scarf.jpg"      
+                        "image" => "images/blue_scarf.jpg"      
                     ];
         $expectedOutput = '<div class="collection_item">';
         $expectedOutput .= '<h3 tabindex="0">Unicorn brand Rainbow</h3>';

@@ -50,18 +50,16 @@ if ($itemIsInvalid) {
         $newYarn["image"] = filter_var($_POST["image"], FILTER_SANITIZE_URL); 
      }
  
-     $_SESSION["validItem"] = true; 
-     $yarnDb = connectToDb("yarnStashDb");
-     addItemToDb($yarnDb, $newYarn);
+     $_SESSION["validItem"] = true;
+      
 
-//     header('Location: addItem.php');
-     //add something with db?
+    print_r($newYarn); 
+    
+    $yarnDb = connectToDb("yarnStashDb");
+    addItemToDb($yarnDb, $newYarn);
 
+ #    header('Location: addItem.php');
 
 }
-
-
-
-
 
 ?>

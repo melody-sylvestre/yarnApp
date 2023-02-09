@@ -18,19 +18,20 @@
 
         <div class="yarn_id">
             <label for="name">Name</label>
-            <input type="text" name="name" id="name" required>
+            <input type="text" name="name" id="name">
             
             <label for="shade">Shade</label>
             <input type="text" name="shade" id="shade">
 
             <label for="image">Image</label>
-            <input type="url" name="image" id="image" >
+            <input type="url" name="image" id="image">
         </div>
 
         <div class="yarn_caracteristics">
             <label for="dominantColour">Dominant colour</label>
             <select name="dominantColour" id="dominantColour">
-                <option value="black">Black</option> 
+                <option value="black">Black</option>
+                <option value="Grey">Grey</option> 
                 <option value="blue">Blue</option> 
                 <option value="green">Green</option>
                 <option value="orange">Orange</option>
@@ -40,6 +41,9 @@
                 <option value="white">White</option>
                 <option value="yellow">Yellow</option>
              </select>
+
+            <label for="composition">Composition</label>
+            <input type="text" name="composition" id="composition"> 
 
             <label for="yarnType">Yarn type</label>
             <select name="yarnType" id="yarnType">
@@ -56,10 +60,10 @@
 
         <div class="quantity">
            <label for="lengthInMeters">Length of a skein (in meters)</label>
-           <input type="number" name="lengthInMeters" id="lengthInMeters"> 
+           <input type="number" name="lengthInMeters" id="lengthInMeters" required> 
 
            <label for="skeinNumber">Number of skeins</label>
-           <input type="number" name="skeinNumber" id="skeinNumber">
+           <input type="number" name="skeinNumber" id="skeinNumber" required>
         </div>    
 
         <div class="project">
@@ -77,8 +81,10 @@
             if (isset($_SESSION['validItem'])) {
                 if ($_SESSION['validItem']) {
                     echo '<p>Your new yarn was added in the stash!</p>';
+                    unset($_SESSION['validItem']);
                 } else {
                     echo '<p>There was an issue with your new item - try again</p>';
+                    unset($_SESSION['validItem']);
                 }
             }
         ?>
