@@ -34,7 +34,7 @@ function describeCollectionItem(array $item): string {
         if (isset($item['dominantColour'])) {
             $description .= '<li>Dominant colour: '. $item['dominantColour'] .'</li>';
         }
-    
+        
         if (isset($item['yarnType'])) {
             $description .= '<li>Yarn type: '. $item['yarnType'] .'</li>';
         }    
@@ -56,7 +56,7 @@ function describeCollectionItem(array $item): string {
         } else {
             $description.= '<li>Available for a new project!</li>';
         }
-    
+   
         $description .= '</ul>';
         $description .= '</div>';
     }
