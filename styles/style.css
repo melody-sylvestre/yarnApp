@@ -20,13 +20,22 @@ h4 {
     font-size: 2rem;
 }
 
-li, label, input, select {
+a, li, label, input, select{
     font-size: 2rem;
 }
 
 h1, h2 {
     margin: 50px;
 }
+
+.interactions_with_db {
+    margin: 20px 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
 
 .collection_item { 
    margin: 20px 50px;
@@ -45,7 +54,6 @@ footer p {
 /* addtional styling for the form  */
 
 form div {
-    margin: 20px 50px
-    
+    margin: 20px 50px   
 }
 
