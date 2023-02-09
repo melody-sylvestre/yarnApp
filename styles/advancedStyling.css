@@ -44,6 +44,9 @@ a {
 
 
 .collection_item { 
+   display: flex;
+   flex-direction: row;
+   
    margin: 20px 50px;
 }
 
@@ -52,7 +55,6 @@ a {
    border-radius: 5px;
 
 }
-
 footer p {
     font-size: 1.6rem;
     margin: 20px 50px;
@@ -63,4 +65,9 @@ footer p {
 form div {
     margin: 20px 50px   
 }
+
+footer a {  
+    margin: 20px 50px;
+}
+
 
