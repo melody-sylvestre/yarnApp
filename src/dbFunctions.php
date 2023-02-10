@@ -16,17 +16,10 @@ function getItemsFromDb(PDO $db): array {
     return $yarnItems;
 }
 
-function getMaxIdfromDb(PDO $db): int {
-    $query = $db->prepare("SELECT id FROM yarns ORDER BY id DESC LIMIT 1;");
-    $query->execute();
-    $ids = $query->fetch();
-    
-    return max($ids);
-}
-
 function addItemToDb(PDO $db, array $newYarnItem) {
-    $query = $db->prepare("INSERT INTO yarns(name, shade, dominantColour, composition, yarnType, lengthInMeters, skeinNumber, project, image)
-            VALUES(:name, :shade, :dominantColour, :composition, :yarnType, :lengthInMeters, :skeinNumber, :project, :image)");
+    $query = $db->prepare("INSERT INTO yarns(name, shade, dominantColour, composition, yarnType, 
+    lengthInMeters, skeinNumber, project, image) VALUES(:name, :shade, :dominantColour, 
+    :composition, :yarnType, :lengthInMeters, :skeinNumber, :project, :image)");
     $query->execute($newYarnItem);
             
 }

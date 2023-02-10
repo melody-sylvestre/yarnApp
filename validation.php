@@ -52,14 +52,9 @@ if ($itemIsInvalid) {
  
      $_SESSION["validItem"] = true;
       
-
-    print_r($newYarn); 
-    
     $yarnDb = connectToDb("yarnStashDb");
     addItemToDb($yarnDb, $newYarn);
-
- #    header('Location: addItem.php');
-
+    header('Location: addItem.php');
 }
 
 ?>
